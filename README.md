@@ -1,0 +1,2 @@
+vbscript sample code
+
