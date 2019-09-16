@@ -1,0 +1,14 @@
+'vExcelPath = WScript.Arguments.Item(0)
+
+If Not IsObject(objexcel) Then
+Set objExcel = CreateObject("Excel.Application")
+End If
+
+If Not IsObject(objWorkbook) Then
+objExcel.Application.Visible = True
+Set objWorkbook = objExcel.Workbooks.Open(vExcelPath)
+End If
+
+If Not IsObject(objSheet) Then
+Set objSheet = objWorkbook.Worksheets("Sheet1")
+End If
